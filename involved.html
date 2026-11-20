@@ -1,0 +1,256 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Get Involved | LIFT</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+    
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+
+<script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    defer
+></script>
+
+<script src="script.js" defer></script>
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="top-nav">
+        <div class="nav-container">
+
+            <a href="index.HTML" class="nav-brand">
+                <img
+                    src="logo.jpeg"
+                    alt="LIFT Logo"
+                    class="brand-logo-img"
+                >
+            </a>
+
+            <button
+                class="mobile-toggle"
+                type="button"
+                aria-label="Toggle navigation"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
+
+            <div class="nav-links">
+                <a href="index.HTML">Home</a>
+                <a href="about.html">About</a>
+                <a href="programs.html">Programs</a>
+                <a href="impact.html">Our Impact</a>
+                <a href="involved.html" class="active">Get Involved</a>
+                <a href="apply.html" class="nav-cta-btn">Apply</a>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <!-- PAGE INTRODUCTION -->
+    <main class="inner-page">
+
+        <section class="page-heading chapters-hero">
+            <span class="section-label">GET INVOLVED</span>
+
+            <h1>Change starts when people come together.</h1>
+
+            <p>
+                Whether you want to volunteer, collaborate, or establish
+                a LIFT chapter in your community, there is a place for you
+                in our mission.
+            </p>
+        </section>
+
+
+        <!-- WAYS TO GET INVOLVED -->
+        <section class="page-content">
+
+            <div class="intro-text">
+                <span class="section-label">BE PART OF THE CHANGE</span>
+
+                <h2>There are many ways to make a difference.</h2>
+
+                <p>
+                    LIFT believes that meaningful change begins with
+                    people who are willing to contribute their time,
+                    ideas, and efforts. Every contribution helps us
+                    bring educational opportunities to more communities.
+                </p>
+            </div>
+
+        </section>
+
+
+        <section class="services-section">
+
+            <div class="services-grid">
+
+                <article class="service-box">
+                    <div class="service-icon">01</div>
+
+                    <h2>Volunteer</h2>
+
+                    <p>
+                        Share your skills, support educational activities,
+                        and help create opportunities for young learners.
+                    </p>
+                </article>
+
+
+                <article class="service-box">
+                    <div class="service-icon">02</div>
+
+                    <h2>Collaborate</h2>
+
+                    <p>
+                        Work with LIFT on initiatives that promote
+                        literacy, mathematics, and accessible education.
+                    </p>
+                </article>
+
+
+                <article class="service-box">
+                    <div class="service-icon">03</div>
+
+                    <h2>Support</h2>
+
+                    <p>
+                        Help us expand our reach by contributing resources,
+                        ideas, or support to our educational initiatives.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <section class="chapters-map-section">
+    <div class="chapters-map-heading">
+        <span class="section-label">OUR GLOBAL COMMUNITY</span>
+        <h2>Find LIFT around the world.</h2>
+        <p>Explore the places where the LIFT community is growing.</p>
+    </div>
+
+    <div class="map-actions">
+        <button type="button" class="add-chapter-btn" id="open-chapter-form">
+            + Add a Chapter
+        </button>
+    </div>
+
+    <div class="chapters-map-container">
+        <div id="lift-world-map" aria-label="Interactive LIFT chapter map"></div>
+        <p id="map-loading-message">Loading the world map...</p>
+    </div>
+
+    <div class="chapter-form-overlay" id="chapter-form-overlay" hidden>
+        <form class="chapter-form" id="chapter-form">
+            <button type="button" class="chapter-form-close" id="close-chapter-form"
+                aria-label="Close form">&times;</button>
+
+            <span class="section-label">GROW OUR COMMUNITY</span>
+            <h2>Add a LIFT Chapter</h2>
+            <p>Enter the chapter name and its location.</p>
+
+            <label for="chapter-name">Chapter name</label>
+            <input id="chapter-name" type="text" placeholder="e.g. LIFT Cairo" required>
+
+            <label for="chapter-country">Country</label>
+            <select id="chapter-country" required>
+                <option value="">Choose a country</option>
+            </select>
+
+            <label for="chapter-city">City</label>
+            <input id="chapter-city" type="text" placeholder="e.g. Cairo" required>
+
+            <p class="chapter-form-note">
+                Antarctica and locations outside recognized countries are not accepted.
+                The map pin indicates the approximate country location.
+            </p>
+
+            <button type="submit" class="add-chapter-btn">
+                Add to Map
+            </button>
+        </form>
+    </div>
+</section>
+
+
+
+        <!-- START A CHAPTER -->
+        <section class="apply-section">
+
+            <span class="section-label">START SOMETHING NEW</span>
+
+            <h2>Bring LIFT to your community.</h2>
+
+            <p class="apply-subtext">
+                Don't see a LIFT chapter in your country?
+                You can take the first step towards establishing one.
+                We welcome students who are passionate about making
+                education more accessible.
+            </p>
+
+            <div class="apply-btn-holder">
+
+                <a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSdu3ynt0GLksO99pFRxlkMRsGJmpP15lf-NxmfMmJuMpiZ0CQ/viewform?usp=sharing&ouid=109562517059686998166"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="apply-giant-btn"
+                >
+                    Start a LIFT Chapter
+                </a>
+
+            </div>
+
+            
+            
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+
+        <div class="footer-content">
+
+            <p>
+                © 2026 LIFT — Literacy is the Foundation of Tomorrow.
+            </p>
+
+            <p>
+                Building opportunities through education.
+            </p>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
